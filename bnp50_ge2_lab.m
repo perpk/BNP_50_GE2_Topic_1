@@ -17,7 +17,7 @@ xlabel('S');
 ylabel('I');
 zlabel('R');
 
-for s = 100:100:1500
+for s= 100:100:1500
     for i = 10:100:1500
         for r = 0:100:1500
             [t, sir] = ode45(@(t, sir) epidemic_odefn_phases(sir, t, beta, lamda, delta, N), t, [s, i, r]);
@@ -25,6 +25,3 @@ for s = 100:100:1500
         end % for r
     end % for i
 end % for s
-
-
-
